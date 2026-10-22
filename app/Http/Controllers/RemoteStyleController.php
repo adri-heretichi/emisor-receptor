@@ -24,9 +24,13 @@ class RemoteStyleController extends Controller
             'newStyle' => ['nullable', 'string'],
         ]);
 
+        
+        
         broadcast(new RemoteStyleUpdate(
             $data['newText'],
-            $data['newStyle'] ?? ''
+            $data['newStyle'] ?? '',
+            $request->user()?->id,
+            $request->ip()
         ));
 
         return back()->with('ok', 'Mensaje emitido correctamente.');

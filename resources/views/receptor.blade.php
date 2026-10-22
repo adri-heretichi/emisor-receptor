@@ -35,5 +35,19 @@
             });
     });
 </script>
+
+<div style="text-align: center; margin: 25px 0;">
+    <a href="{{ url('/juego') }}"
+       style="display: inline-block;
+              background-color: #db2777;
+              color: white;
+              padding: 14px 24px;
+              border-radius: 10px;
+              text-decoration: none;
+              font-weight: bold;">
+        🎮 Jugar al Ta-Te-Ti Online
+    </a>
+</div>
+
 </body>
 </html>
